@@ -1,10 +1,9 @@
-import React from "react";
-
 const SoundSection = () => {
   const handleLearnMore = () => {
     const element = document.querySelector(".display-section");
+    console.log(element);
     window.scrollTo({
-      top: element?.getBoundingClientRect().bottom,
+      top: element?.getBoundingClientRect().top + window.scrollY,
       left: 0,
       behavior: "smooth",
     });
@@ -15,17 +14,17 @@ const SoundSection = () => {
       <div className="body">
         <div className="sound-section-content content">
           <h2 className="title">New Sound System</h2>
-          <p className="text">Tell the base.</p>
+          <h2 className="text">Feel the base</h2>
           <span className="description">
-            From $41.65/mo. for 24 mo. or $999 before trade-in
+            From $41.62/mo. for 24 mo. or $999 before trade in
           </span>
           <ul className="links">
-            <li className="">
+            <li>
               <button className="button">Buy</button>
             </li>
             <li>
-              <a onClick={handleLearnMore} className="link">
-                Learn more.
+              <a className="link" onClick={handleLearnMore}>
+                Learn more
               </a>
             </li>
           </ul>

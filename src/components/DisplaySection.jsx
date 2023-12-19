@@ -1,8 +1,10 @@
-import React from "react";
-
 const DisplaySection = ({ triggerPreview }) => {
   const handleScrollToTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    window.scrollTo({
+      left: 0,
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -10,10 +12,10 @@ const DisplaySection = ({ triggerPreview }) => {
       <h2 className="title">New</h2>
       <p className="text">Brilliant.</p>
       <span className="description">
-        A display that's up to 2x brighter in the sun.
+        A display that's up to 2x brighter in the sun
       </span>
       <button className="button" onClick={triggerPreview}>
-        Try me!
+        Try me
       </button>
       <button className="back-button" onClick={handleScrollToTop}>
         TOP

@@ -1,23 +1,23 @@
-import React from "react";
-import Logo from "../assets/images/iphone-14.jpg";
-import HoldingIphone from "../assets/images/iphone-hand.png";
+import IPhone from "../assets/images/iphone-14.jpg";
+import HoldingIPhone from "../assets/images/iphone-hand.png";
 
 const Jumbotron = () => {
   const handleLearnMore = () => {
     const element = document.querySelector(".sound-section");
     window.scrollTo({
-      top: element?.getBoundingClientRect().top,
+      top: element?.getBoundingClientRect().top + window.scrollY,
       left: 0,
       behavior: "smooth",
     });
   };
+
   return (
     <div className="jumbotron-section wrapper">
       <h2 className="title">New</h2>
-      <img src={Logo} alt="iPhone 15 Pro" />
-      <p className="text">Big and Bigger.</p>
+      <img className="logo" src={IPhone} alt="iPhone 14 Pro" />
+      <p className="text">Big and bigger.</p>
       <span className="description">
-        From $41.65/mo. for 24 mo. or $999 before trade-in
+        From $41.62/mo. for 24 mo. or $999 before trade in
       </span>
       <ul className="links">
         <li>
@@ -25,11 +25,11 @@ const Jumbotron = () => {
         </li>
         <li>
           <a className="link" onClick={handleLearnMore}>
-            Lear more
+            Learn more
           </a>
         </li>
       </ul>
-      <img src={HoldingIphone} alt="iPhone" className="iphone-img" />
+      <img className="iphone-img" src={HoldingIPhone} alt="iPhone" />
     </div>
   );
 };
